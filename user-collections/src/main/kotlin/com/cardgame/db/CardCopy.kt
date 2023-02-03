@@ -1,23 +1,23 @@
 package com.cardgame.db
 
 import jakarta.persistence.*
-import javax.validation.constraints.Min
-import javax.validation.constraints.NotBlank
-import javax.validation.constraints.NotNull
+import jakarta.validation.constraints.*
 
 @Entity
+
 class CardCopy(
 
-    @get:Id @get:GeneratedValue
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     var id : Long? = null,
 
-    @get:ManyToOne
-    @get:NotNull
+    @ManyToOne
+    @NotNull
     var user : User? = null,
 
-    @get:NotBlank
+    @NotBlank
     var cardId: String? = null,
 
-    @get:Min(0)
+    @Min(0)
     var numberOfCopies : Int = 0
 )

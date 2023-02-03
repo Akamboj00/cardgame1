@@ -1,23 +1,26 @@
 package com.cardgame.db
 
 import jakarta.persistence.*
-import javax.validation.constraints.Min
-import javax.validation.constraints.NotBlank
+import jakarta.validation.constraints.Min
+import jakarta.validation.constraints.NotBlank
+
 
 @Entity
 @Table(name="user_data")
 class User(
 
-    @get:Id
-    @get:NotBlank
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @NotBlank
     var userId: String? = null,
 
-    @get:Min(0)
+    @Min(0)
     var coins: Int = 0,
 
-    @get:Min(0)
+    @Min(0)
     var cardPacks: Int = 0,
 
-    @get:OneToMany(mappedBy = "user", cascade = [(CascadeType.ALL)])
+    @OneToMany(mappedBy = "user", cascade = [(CascadeType.ALL)])
     var ownedCards : MutableList<CardCopy> = mutableListOf()
 )

@@ -18,7 +18,7 @@
         <version.kotlin>1.3.72</version.kotlin>
         <version.springboot>3.0.1</version.springboot>
         <version.springfox>3.0.0</version.springfox>
-        <version.postgres>42.1.4</version.postgres>
+        <version.postgres>42.5.3</version.postgres>
         <kotlin.version>1.6.10</kotlin.version>
         <version.surefire-failsafe>3.0.0-M4</version.surefire-failsafe>
     </properties>
@@ -28,7 +28,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <version>3.0.1</version>
+            <version>${version.springboot}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -55,9 +55,19 @@
 <!--            <version>6.4.4</version>-->
 <!--        </dependency>-->
         <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
-            <version>2.3.0</version>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+            <version>3.0.2</version>
         </dependency>
         <dependency>
             <groupId>org.glassfish.jaxb</groupId>
@@ -73,23 +83,13 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <version>${version.springboot}</version>
+            <version>3.0.2</version>
         </dependency>
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <version>1.4.197</version>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.persistence</groupId>
-            <artifactId>jakarta.persistence-api</artifactId>
-            <version>3.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.validation</groupId>
-            <artifactId>jakarta.validation-api</artifactId>
-            <version>2.0.2</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.h2database</groupId>-->
+<!--            <artifactId>h2</artifactId>-->
+<!--            <version>2.1.214</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jpa</artifactId>
@@ -99,6 +99,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
             <version>${version.springboot}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.cardgame</groupId>
+            <artifactId>cardgame</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
