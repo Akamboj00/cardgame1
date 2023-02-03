@@ -23,7 +23,7 @@ interface UserRepository : CrudRepository<User, String> {
 
 @Service
 @Transactional
-class UserService(
+open class UserService(
     private val userRepository: UserRepository,
     private val cardService: CardService
 ) {
