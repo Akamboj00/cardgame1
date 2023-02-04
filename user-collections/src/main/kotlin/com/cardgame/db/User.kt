@@ -9,7 +9,7 @@ import javax.validation.constraints.NotBlank
 @Table(name="user_data")
 class User(
 
-    @get:Id @get:GeneratedValue(strategy = GenerationType.AUTO)
+    @get:Id
     @get:NotBlank
     var userId: String? = null,
 
@@ -19,6 +19,6 @@ class User(
     @get:Min(0)
     var cardPacks: Int = 0,
 
-    @OneToMany(mappedBy = "user", cascade = [(CascadeType.ALL)])    @get:OneToMany(mappedBy = "user", cascade = [(CascadeType.ALL)])
+    @get:OneToMany(mappedBy = "user", cascade = [(CascadeType.ALL)])
     var ownedCards : MutableList<CardCopy> = mutableListOf()
 )
