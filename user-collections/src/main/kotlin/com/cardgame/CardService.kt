@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service
 import com.cardgame.Rarity
 import com.cardgame.model.Card
 import com.cardgame.model.Collection
-import jakarta.annotation.PostConstruct
+import javax.annotation.PostConstruct
 import kotlin.random.Random
 
 @Service

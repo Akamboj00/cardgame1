@@ -1,7 +1,9 @@
 package com.cardgame.db
 
-import jakarta.persistence.*
-import jakarta.validation.constraints.*
+import javax.persistence.*
+import javax.validation.constraints.Min
+import javax.validation.constraints.NotBlank
+import javax.validation.constraints.NotNull
 
 @Entity
 
