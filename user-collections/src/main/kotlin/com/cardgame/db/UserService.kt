@@ -13,7 +13,7 @@ import javax.persistence.LockModeType
 
 
 @Repository
-interface UserRepository : CrudRepository<User, String> {
+interface UserRepository : CrudRepository<User, String>{
 
     @Lock(LockModeType.PESSIMISTIC_WRITE)
     @Query("select u from User u where u.userId = :id")
@@ -24,7 +24,7 @@ interface UserRepository : CrudRepository<User, String> {
 
 @Service
 @Transactional
-open class UserService(
+class UserService(
     private val userRepository: UserRepository,
     private val cardService: CardService
 ) {
