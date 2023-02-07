@@ -4,6 +4,7 @@ import com.cardgame.db.UserRepository
 import com.cardgame.db.UserService
 import com.cardgame.dto.Command
 import com.cardgame.dto.PatchUserDto
+import com.cardgame.model.Collection
 import io.restassured.RestAssured
 import io.restassured.RestAssured.given
 import io.restassured.http.ContentType
@@ -15,11 +16,27 @@ import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.web.server.LocalServerPort
+import org.springframework.context.annotation.Primary
+import org.springframework.context.annotation.Profile
+import org.springframework.stereotype.Service
 import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.context.junit.jupiter.SpringExtension
 import javax.annotation.PostConstruct
 
-@ActiveProfiles("test")
+
+@Profile("RestAPITest")
+@Primary
+@Service
+class FakeCardService : CardService(){
+
+    override fun fetchData() {
+        val dto = FakeData.getCollectionDto()
+        super.collection = Collection(dto)
+    }
+}
+
+
+@ActiveProfiles("RestAPITest","test")
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 internal class RestAPITest {
