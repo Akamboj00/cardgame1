@@ -1,7 +1,7 @@
 package com.cardgame.user.collections.model
 
-import com.cardgame.cards.dto.CardDto
-import com.cardgame.cards.dto.Rarity
+import com.cardgame.cardsdto.CardDto
+import com.cardgame.cardsdto.Rarity
 
 data class Card(
     val cardId : String,

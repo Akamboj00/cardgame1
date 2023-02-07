@@ -2,7 +2,7 @@ package com.cardgame.user.collections
 
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
-import com.cardgame.cards.dto.Rarity
+import com.cardgame.cardsdto.Rarity
 import com.cardgame.user.collections.model.Card
 import com.cardgame.user.collections.model.Collection
 import javax.annotation.PostConstruct

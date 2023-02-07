@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="cards" />
+        <module name="card-images" />
+        <module name="scores" />
+        <module name="rest-dto" />
         <module name="rest-exception" />
         <module name="cards-dto" />
         <module name="user-collections" />
-        <module name="scores" />
-        <module name="rest-dto" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />

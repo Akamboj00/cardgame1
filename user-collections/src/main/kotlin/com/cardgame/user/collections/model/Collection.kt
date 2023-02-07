@@ -1,7 +1,7 @@
 package com.cardgame.user.collections.model
 
-import com.cardgame.cards.dto.CollectionDto
-import com.cardgame.cards.dto.Rarity
+import com.cardgame.cardsdto.CollectionDto
+import com.cardgame.cardsdto.Rarity
 import kotlin.math.abs
 
 data class Collection(

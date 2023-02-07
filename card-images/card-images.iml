@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="AutoImportedSourceRoots">
+    <option name="directories">
+      <list>
+        <option value="D:\cardgame1\card-images/src/main/java" />
+        <option value="D:\cardgame1\card-images/src/main/kotlin" />
+        <option value="D:\cardgame1\card-images/src/test/java" />
+        <option value="D:\cardgame1\card-images/src/test/kotlin" />
+      </list>
+    </option>
+  </component>
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+    </content>
+  </component>
+</module>

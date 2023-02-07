@@ -1,8 +1,8 @@
 package com.cardgame
 
-import com.cardgame.cards.dto.CardDto
-import com.cardgame.cards.dto.CollectionDto
-import com.cardgame.cards.dto.Rarity
+import com.cardgame.cardsdto.CardDto
+import com.cardgame.cardsdto.CollectionDto
+import com.cardgame.cardsdto.Rarity
 
 object FakeData {
     fun getCollectionDto() : CollectionDto {
