@@ -1,10 +1,11 @@
 package com.cardgame
 
-import com.cardgame.db.UserRepository
-import com.cardgame.db.UserService
-import com.cardgame.dto.Command
-import com.cardgame.dto.PatchUserDto
-import com.cardgame.model.Collection
+import com.cardgame.user.collections.db.UserRepository
+import com.cardgame.user.collections.db.UserService
+import com.cardgame.user.collections.dto.Command
+import com.cardgame.user.collections.dto.PatchUserDto
+import com.cardgame.user.collections.model.Collection
+import com.cardgame.user.collections.CardService
 import io.restassured.RestAssured
 import io.restassured.RestAssured.given
 import io.restassured.http.ContentType

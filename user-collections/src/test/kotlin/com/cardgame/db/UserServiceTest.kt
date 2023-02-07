@@ -1,11 +1,13 @@
 package com.cardgame.db
 
-import com.cardgame.CardService
+import com.cardgame.user.collections.CardService
 import com.cardgame.FakeData
 import org.springframework.context.annotation.Primary
 import org.springframework.context.annotation.Profile
 import org.springframework.stereotype.Service
-import com.cardgame.model.Collection
+import com.cardgame.user.collections.model.Collection
+import com.cardgame.user.collections.db.UserRepository
+import com.cardgame.user.collections.db.UserService
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test

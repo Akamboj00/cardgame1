@@ -9,6 +9,7 @@
         <module name="rest-exception" />
         <module name="cards-dto" />
         <module name="user-collections" />
+        <module name="scores" />
         <module name="rest-dto" />
       </profile>
     </annotationProcessing>

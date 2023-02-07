@@ -1,6 +1,11 @@
 package com.cardgame
+
+import com.cardgame.cards.dto.CardDto
+import com.cardgame.cards.dto.CollectionDto
+import com.cardgame.cards.dto.Rarity
+
 object FakeData {
-    fun getCollectionDto() : CollectionDto{
+    fun getCollectionDto() : CollectionDto {
         val dto = CollectionDto()
 
         dto.prices[Rarity.BRONZE] = 100
