@@ -7,23 +7,17 @@ import com.cardgame.user.collections.dto.PatchUserDto
 import com.cardgame.user.collections.dto.UserDto
 import io.swagger.annotations.Api
 import io.swagger.annotations.ApiOperation
-import org.springframework.web.bind.annotation.*
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.PutMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
-import java.lang.IllegalArgumentException
+import org.springframework.web.bind.annotation.*
 
 
 @Api(value = "/api/user-collections", description = "Operations on card collections owned by users")
+@RestController
 @RequestMapping(
     path = ["/api/user-collections"],
     produces = [(MediaType.APPLICATION_JSON_VALUE)]
 )
-@RestController
 class RestAPI(
     private val userService: UserService
 ) {

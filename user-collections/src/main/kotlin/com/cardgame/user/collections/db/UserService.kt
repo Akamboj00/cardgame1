@@ -36,7 +36,9 @@ class UserService(
     fun findByIdEager(userId: String) : User?{
 
         val user = userRepository.findById(userId).orElse(null)
-        user?.ownedCards?.size
+        if(user != null){
+            user.ownedCards.size
+        }
         return user
     }
 

@@ -62,7 +62,7 @@ class RestApi {
         val folder = when{
             imgId.run{ endsWith("-monster.svg") || endsWith("-cyclops.svg")
                     || endsWith("-dragon.svg") || endsWith("-snake.svg")}
-            -> "../card-images/src/main/resources/1236106-monsters"
+            -> "/1236106-monsters"
             else -> return ResponseEntity.status(400).build()
         }
 

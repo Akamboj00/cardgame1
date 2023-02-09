@@ -14,3 +14,6 @@ spring:
     throwExceptionIfNoHandlerFound: true
   resources:
     add-mappings: false
+
+
+cardServiceAddress: "cards-service:8080"
