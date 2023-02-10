@@ -19,6 +19,7 @@ import kotlin.random.Random
 
 @Service
 class CardService(
+    private val client: RestTemplate,
     private val circuitBreakerFactory: Resilience4JCircuitBreakerFactory
 ) {
 
@@ -37,8 +38,6 @@ class CardService(
     private val lock = Any()
 
     private lateinit var cb: CircuitBreaker
-
-    private val client = RestTemplate()
 
 
     @PostConstruct
@@ -89,6 +88,7 @@ class CardService(
             log.error("Failed to parse card collection info: ${e.message}")
         }
     }
+
     private fun verifyCollection(){
 
         if(collection == null){

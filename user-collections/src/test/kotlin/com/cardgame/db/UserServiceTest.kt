@@ -1,13 +1,6 @@
 package com.cardgame.db
 
-import com.cardgame.user.collections.CardService
-import com.cardgame.FakeData
-import org.springframework.context.annotation.Primary
-import org.springframework.context.annotation.Profile
-import org.springframework.stereotype.Service
-import com.cardgame.user.collections.model.Collection
-import com.cardgame.user.collections.db.UserRepository
-import com.cardgame.user.collections.db.UserService
+
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -15,15 +8,22 @@ import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.cloud.circuitbreaker.resilience4j.Resilience4JCircuitBreakerFactory
+import org.springframework.context.annotation.Primary
+import org.springframework.context.annotation.Profile
+import org.springframework.stereotype.Service
 import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.context.junit.jupiter.SpringExtension
-import java.lang.IllegalArgumentException
-
+import org.springframework.web.client.RestTemplate
+import com.cardgame.user.collections.CardService
+import com.cardgame.FakeData
+import com.cardgame.user.collections.db.UserRepository
+import com.cardgame.user.collections.db.UserService
+import com.cardgame.user.collections.model.Collection
 
 @Profile("UserServiceTest")
 @Primary
 @Service
-class FakeCardService : CardService(Resilience4JCircuitBreakerFactory()){
+class FakeCardService : CardService(RestTemplate(), Resilience4JCircuitBreakerFactory()){
 
     override fun fetchData() {
         val dto = FakeData.getCollectionDto()

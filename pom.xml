@@ -17,6 +17,8 @@
       <module>scores</module>
       <module>cards</module>
       <module>card-images</module>
+      <module>api-gateway</module>
+      <module>e2e-tests</module>
   </modules>
 
     <properties>
