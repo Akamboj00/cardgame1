@@ -11,6 +11,9 @@ services:
     depends_on:
       - discovery
 
+  rabbitmq:
+    image: "rabbitmq:3"
+
   discovery:
     image: "consul:1.8"
     environment:
@@ -42,6 +45,7 @@ services:
       - api-gateway
       - redis
       - postgres-auth
+      - rabbitmq
 
   cards_0:
     build:
@@ -68,6 +72,7 @@ services:
       - discovery
       - postgres-user-collections
       - auth
+      - rabbitmq
 
   scores:
     build:
@@ -77,5 +82,6 @@ services:
       - api-gateway
       - discovery
       - postgres-scores
+      - rabbitmq
 
 

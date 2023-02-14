@@ -1,6 +1,6 @@
-package com.cardgame
+package com.cardgame.user.collections
 
-import com.cardgame.rest.dto.WrappedResponse
+import com.cardgame.restdto.WrappedResponse
 import com.cardgame.user.collections.db.UserRepository
 import com.cardgame.user.collections.db.UserService
 import com.cardgame.user.collections.dto.Command
@@ -22,33 +22,16 @@ import org.springframework.boot.test.util.TestPropertyValues
 import org.springframework.boot.web.server.LocalServerPort
 import org.springframework.context.ApplicationContextInitializer
 import org.springframework.context.ConfigurableApplicationContext
-import org.springframework.context.annotation.Primary
-import org.springframework.context.annotation.Profile
-import org.springframework.stereotype.Service
 import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.context.ContextConfiguration
 import org.springframework.test.context.junit.jupiter.SpringExtension
 import wiremock.com.fasterxml.jackson.databind.ObjectMapper
 import javax.annotation.PostConstruct
 
-
-//Don't need this class anymore because of circuit breaker
-
-//@Profile("RestAPITest")
-//@Primary
-//@Service
-////class FakeCardService : CardService(){
-////
-////    override fun fetchData() {
-////        val dto = FakeData.getCollectionDto()
-////        super.collection = Collection(dto)
-////    }
-////}
-
 @ActiveProfiles("test")
 @ExtendWith(SpringExtension::class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ContextConfiguration(initializers = [(RestAPITest.Companion.Initializer::class)])
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 internal class RestAPITest {
 
     @LocalServerPort

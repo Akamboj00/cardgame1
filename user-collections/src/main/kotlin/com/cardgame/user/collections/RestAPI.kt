@@ -1,7 +1,7 @@
 package com.cardgame.user.collections
 
-import com.cardgame.rest.dto.RestResponseFactory
-import com.cardgame.rest.dto.WrappedResponse
+import com.cardgame.restdto.RestResponseFactory
+import com.cardgame.restdto.WrappedResponse
 import com.cardgame.user.collections.db.UserService
 import com.cardgame.user.collections.dto.Command
 import com.cardgame.user.collections.dto.PatchResultDto

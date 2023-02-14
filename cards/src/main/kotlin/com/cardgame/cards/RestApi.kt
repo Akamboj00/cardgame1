@@ -1,7 +1,7 @@
 package com.cardgame.cards
 
 import com.cardgame.cardsdto.CollectionDto
-import com.cardgame.rest.dto.WrappedResponse
+import com.cardgame.restdto.WrappedResponse
 import io.swagger.annotations.Api
 import io.swagger.annotations.ApiOperation
 import org.springframework.http.CacheControl

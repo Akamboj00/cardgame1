@@ -1,4 +1,4 @@
-package com.cardgame.rest.dto
+package com.cardgame.restdto
 
 import io.swagger.annotations.ApiModel
 import io.swagger.annotations.ApiModelProperty

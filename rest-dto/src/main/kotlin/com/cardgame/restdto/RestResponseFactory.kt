@@ -1,4 +1,4 @@
-package com.cardgame.rest.dto
+package com.cardgame.restdto
 
 import org.springframework.http.ResponseEntity
 import java.net.URI

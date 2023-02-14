@@ -1,6 +1,6 @@
-package com.cardgame.rest.exception
+package com.cardgame.restexception
 
-import com.cardgame.rest.dto.WrappedResponse
+import com.cardgame.restdto.WrappedResponse
 import com.google.common.base.Throwables
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpStatus

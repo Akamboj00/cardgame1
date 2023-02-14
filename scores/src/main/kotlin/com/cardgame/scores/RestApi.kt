@@ -1,8 +1,8 @@
 package com.cardgame.scores
 
-import com.cardgame.rest.dto.PageDto
-import com.cardgame.rest.dto.RestResponseFactory
-import com.cardgame.rest.dto.WrappedResponse
+import com.cardgame.restdto.PageDto
+import com.cardgame.restdto.RestResponseFactory
+import com.cardgame.restdto.WrappedResponse
 import com.cardgame.scores.db.UserStatsRepository
 import com.cardgame.scores.db.UserStatsService
 import com.cardgame.scores.dto.UserStatsDto

@@ -1,4 +1,4 @@
-package com.cardgame.db
+package com.cardgame.user.collections.db
 
 
 import org.junit.jupiter.api.Assertions.*
@@ -15,7 +15,7 @@ import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.context.junit.jupiter.SpringExtension
 import org.springframework.web.client.RestTemplate
 import com.cardgame.user.collections.CardService
-import com.cardgame.FakeData
+import com.cardgame.user.collections.FakeData
 import com.cardgame.user.collections.db.UserRepository
 import com.cardgame.user.collections.db.UserService
 import com.cardgame.user.collections.model.Collection

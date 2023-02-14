@@ -1,4 +1,4 @@
-package com.cardgame.rest.exception
+package com.cardgame.restexception
 
 class UserInputValidationException(
     message: String,

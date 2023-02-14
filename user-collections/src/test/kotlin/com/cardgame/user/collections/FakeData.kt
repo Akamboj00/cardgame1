@@ -1,4 +1,4 @@
-package com.cardgame
+package com.cardgame.user.collections
 
 import com.cardgame.cardsdto.CardDto
 import com.cardgame.cardsdto.CollectionDto

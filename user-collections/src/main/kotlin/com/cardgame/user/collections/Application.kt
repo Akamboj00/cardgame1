@@ -1,5 +1,9 @@
 package com.cardgame.user.collections
 
+import org.springframework.amqp.core.Binding
+import org.springframework.amqp.core.BindingBuilder
+import org.springframework.amqp.core.FanoutExchange
+import org.springframework.amqp.core.Queue
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.cloud.client.loadbalancer.LoadBalanced
@@ -13,6 +17,7 @@ import springfox.documentation.spring.web.plugins.Docket
 
 @SpringBootApplication
 class Application{
+
 
     @LoadBalanced
     @Bean
@@ -36,6 +41,23 @@ class Application{
             .version("1.0")
             .build()
     }
+
+    @Bean
+    fun fanout(): FanoutExchange {
+        return FanoutExchange("user-creation")
+    }
+
+    @Bean
+    fun queue(): Queue {
+        return Queue("user-creation-user-collections")
+    }
+
+    @Bean
+    fun binding(fanout: FanoutExchange,
+                queue: Queue): Binding {
+        return BindingBuilder.bind(queue).to(fanout)
+    }
+
 }
 
 

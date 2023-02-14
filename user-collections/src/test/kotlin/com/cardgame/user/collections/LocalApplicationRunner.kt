@@ -1,6 +1,5 @@
-package com.cardgame
+package com.cardgame.user.collections
 
-import com.cardgame.user.collections.Application
 import org.springframework.boot.SpringApplication
 
 fun main(args: Array<String>) {

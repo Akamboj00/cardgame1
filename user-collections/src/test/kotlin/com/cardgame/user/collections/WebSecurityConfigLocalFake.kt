@@ -1,6 +1,5 @@
-package com.cardgame
+package com.cardgame.user.collections
 
-import com.cardgame.user.collections.WebSecurityConfig
 import org.springframework.context.annotation.Configuration
 import org.springframework.core.annotation.Order
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder

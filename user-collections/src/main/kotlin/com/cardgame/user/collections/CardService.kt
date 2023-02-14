@@ -2,7 +2,7 @@ package com.cardgame.user.collections
 
 import com.cardgame.cardsdto.CollectionDto
 import com.cardgame.cardsdto.Rarity
-import com.cardgame.rest.dto.WrappedResponse
+import com.cardgame.restdto.WrappedResponse
 import com.cardgame.user.collections.model.Card
 import com.cardgame.user.collections.model.Collection
 import org.slf4j.LoggerFactory

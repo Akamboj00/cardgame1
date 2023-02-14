@@ -1,5 +1,9 @@
 package com.cardgame.scores
 
+import org.springframework.amqp.core.Binding
+import org.springframework.amqp.core.BindingBuilder
+import org.springframework.amqp.core.FanoutExchange
+import org.springframework.amqp.core.Queue
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.annotation.Bean
@@ -28,6 +32,24 @@ class Application {
             .version("1.0")
             .build()
     }
+
+    @Bean
+    fun fanout(): FanoutExchange {
+        return FanoutExchange("user-creation")
+    }
+
+    @Bean
+    fun queue(): Queue {
+        return Queue("user-creation-scores")
+    }
+
+    @Bean
+    fun binding(fanout: FanoutExchange,
+                queue: Queue
+    ): Binding {
+        return BindingBuilder.bind(queue).to(fanout)
+    }
+
 }
 
 

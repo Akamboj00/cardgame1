@@ -1,6 +1,8 @@
 package com.cardgame.auth
 
 import javax.validation.constraints.NotBlank
+
+
 class AuthDto(
     @get:NotBlank
     var userId : String? = null,
